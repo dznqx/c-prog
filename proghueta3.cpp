@@ -1,8 +1,8 @@
 #include <iostream>
 #include <cstdlib>
+
 using namespace std;
 int main(){
-    srand(time(NULL));
     const int a = -40;
     const int b = 40;
     int m,n;
@@ -15,7 +15,7 @@ int main(){
     {
         for (int j=0;j<n;j++)
         {
-            v[i][j] = (random()*(b - a + 1) / RAND_MAX + a);
+            v[i][j] = (rand()*(b - a + 1) / RAND_MAX + a);
         }
     }
     cout << endl;
@@ -40,8 +40,8 @@ int main(){
     }
     cout << endl;
 
-    cout << "Xueta:" << "";
+    cout << "Max:" << "";
     cout << max << endl; 
     
-    return 0;
+    cin.get();cin.get();
 }
