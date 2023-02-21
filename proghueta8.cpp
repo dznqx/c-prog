@@ -11,6 +11,8 @@ int main(){
     int sum = 0;
     double arf;
     int y = 0;
+    int q;
+    int *b = new int[q];
     //Ввод элементов
     for (int i=0;i<n;i++)
     {
@@ -45,5 +47,6 @@ int main(){
         cout << y << endl;
         cout << sum << endl;
         arf = sum / y;
+        delete [] b;
         cout << arf << endl;
 }
