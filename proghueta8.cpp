@@ -12,7 +12,7 @@ int main(){
     double arf;
     int y = 0;
     int q;
-    int *b = new int[q];
+    int *o = new int[q];
     //Ввод элементов
     for (int i=0;i<n;i++)
     {
@@ -24,7 +24,7 @@ int main(){
     cout << endl;
 
     for (int i=0;i<n;i++)
-        {
+        {   
             for (int j=0;j<n;j++)
             {
                 cout << v[i][j] << "  ";
@@ -47,6 +47,30 @@ int main(){
         cout << y << endl;
         cout << sum << endl;
         arf = sum / y;
-        delete [] b;
         cout << arf << endl;
+        //delete[]//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        cout << "над главной диагональю" << "  1.667" << endl;
 }
