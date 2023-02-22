@@ -1,23 +1,14 @@
 #include <iostream>
 #include <cstdlib>
-#include <locale>
-
 using namespace std;
 
 int main(){
-    setlocale(0," ");
     const int a = -40;
     const int b = 40;
-    int n,m;
+    int n,m,q,y;
     cin >> n;
     cin >> m;
-    double sum = 0;
-    double sum1 = 0;
-    double z = 0;
-    double l = 0;
-    double arf;
-    int y = 0;
-    int q;
+    double sum,sum1,z,l,arf = 0;
     int **v = new int* [n];
     //Ввод элементов
     for (int i=0; i<n; i++){
@@ -64,9 +55,8 @@ int main(){
             }
         }
         z = (sum1 / l);
-        cout << z << endl;
+        cout << "Vishe glavnoi diagonali:" <<  z << endl;
         arf = (sum / y);
-        cout << arf << endl;
-
+        cout << "Po glavnoi diagonali" << arf << endl;
         cin.get();cin.get();
 }
