@@ -15,15 +15,16 @@ bool is_prime(int n) {
 }
 
 int main() {
-    int a, b;
+    int a, b, c;
     cout << "Enter two numbers a and b: ";
     cin >> a >> b;
     cout << "Prime numbers between " << a <<" and " << b << " are: ";
     for (int i = a; i <= b; i++) {
         if (is_prime(i)) {
-            cout << i << " ";
+            c++;
         }
     }
+    cout << c << " ";
     cout << endl;
     cin.get();cin.get();
 }
