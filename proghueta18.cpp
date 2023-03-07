@@ -19,7 +19,7 @@ int main() {
     int b, c;
     cout << "Enter two numbers a and b: ";
     cin >>  b;
-    cout << "Summ of not prime numbers " << a <<" and " << b << " are: ";
+    cout << "Last prime number before A:= " << b << " are: ";
     for (int i = a; i < b; i++) {
         if (is_prime(i)) {
             c = i;

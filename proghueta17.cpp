@@ -18,7 +18,7 @@ int main() {
     int a, b, c;
     cout << "Enter two numbers a and b: ";
     cin >> a >> b;
-    cout << "Summ of not prime numbers " << a <<" and " << b << " are: ";
+    cout << "Summ of not prime numbers between " << a <<" and " << b << " are: ";
     for (int i = a; i <= b; i++) {
         if (is_prime(i) == false) {
             c += i;

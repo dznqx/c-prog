@@ -18,7 +18,7 @@ int main() {
     int a, b, c;
     cout << "Enter two numbers a and b: ";
     cin >> a >> b;
-    cout << "Prime numbers between " << a <<" and " << b << " are: ";
+    cout << "Amount of prime numbers between " << a <<" and " << b << " are: ";
     for (int i = a; i <= b; i++) {
         if (is_prime(i)) {
             c++;
