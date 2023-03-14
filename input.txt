@@ -1,14 +1,3 @@
-Paranyushkin
-Dmitry
-Andreevich 
-2004 
-Msk 
-GBOU1344 
-2022
-Sharigin
-Vsevolod
-Dmitrievich 
-2005 
-Msk 
-GBOU 
-2023
+Иванов Иван Иванович 2002 Москва 2022
+Петров Петр Петрович 2003 Санкт-Петербург 2023
+Сидоров Сидор Сидорович 2005 Казань 2020

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include <string>
+#include <vector>
 
 using namespace std;
 
@@ -10,30 +10,40 @@ struct Student {
     string patronymic;
     int birth_year;
     string address;
-    int school_grad_year;
+    int school_number;
 };
 
 int main() {
     ifstream input_file("input.txt");
-    ofstream output_file("output.txt");
-
-    int num_students;
-    input_file >> num_students;
-
-    Student students[num_students];
-
-    for (int i = 0; i < num_students; i++) {
-        input_file >> students[i].surname >> students[i].name >> students[i].patronymic >> students[i].birth_year >> students[i].address >> students[i].school_grad_year;
+    if (!input_file.is_open()) {
+        cout << "Unable to open input file!" << endl;
+        return 1;
     }
 
-    for (int i = 0; i < num_students; i++) {
-        if (students[i].school_grad_year != 2023) {
-            output_file << students[i].surname << " " << students[i].name << " " << students[i].patronymic << " " << students[i].birth_year << " " << students[i].address << " " << students[i].school_grad_year << endl;
+    vector<Student> students;
+    string surname, name, patronymic, address;
+    int birth_year, school_number;
+
+    // Read data from input file and create list of students
+    while (input_file >> surname >> name >> patronymic >> birth_year >> address >> school_number) {
+        Student student = {surname, name, patronymic, birth_year, address, school_number};
+        students.push_back(student);
+    }
+
+    // Create new file for output
+    ofstream output_file("output.txt");
+    if (!output_file.is_open()) {
+        cout << "Unable to open output file!" << endl;
+        return 1;
+    }
+
+    // Write list of students to output file, excluding those who finished school in 2023
+    for (Student student : students) {
+        if (student.birth_year != 2005) {
+            output_file << student.surname << " " << student.name << " " << student.patronymic
+                        << " " << student.birth_year << " " << student.address << " " << student.school_number << endl;
         }
     }
-
-    input_file.close();
-    output_file.close();
 
     return 0;
 }
