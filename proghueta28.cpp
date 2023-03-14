@@ -36,7 +36,7 @@ int main() {
     while (inputFile >> currentStudent.firstName >> currentStudent.lastName >> currentStudent.middleName >> currentStudent.groupNumber >> currentStudent.exam1 >> currentStudent.exam2 >> currentStudent.exam3) {
         int sum = currentStudent.exam1 + currentStudent.exam2 + currentStudent.exam3;
         if (sum >= 9) {
-            outputFile << currentStudent.firstName << " " << currentStudent.lastName << " " << currentStudent.middleName << " " << currentStudent.groupNumber << " " << currentStudent.exam1 << " " << currentStudent.exam2 << " " << currentStudent.exam3 << endl;
+            outputFile << currentStudent.firstName << " " << currentStudent.lastName << " " << currentStudent.middleName << " " << currentStudent.groupNumber  << endl;
         }
     }
 

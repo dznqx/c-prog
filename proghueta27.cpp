@@ -10,19 +10,19 @@ struct Student {
     string patronymic;
     int birth_year;
     string address;
-    int school_number;
+    string school_number;
 };
 
 int main() {
-    ifstream input_file("input.txt");
+    ifstream input_file("input1.txt");
     if (!input_file.is_open()) {
         cout << "Unable to open input file!" << endl;
         return 1;
     }
 
     vector<Student> students;
-    string surname, name, patronymic, address;
-    int birth_year, school_number;
+    string surname, name, patronymic, address,school_number;
+    int birth_year;
 
     // Read data from input file and create list of students
     while (input_file >> surname >> name >> patronymic >> birth_year >> address >> school_number) {
