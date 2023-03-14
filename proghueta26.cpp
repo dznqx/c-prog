@@ -9,7 +9,7 @@ int main() {
     int m;
 
     // создание и открытие бинарного файла для записи
-    ofstream fout("fibonacci.dat", ios::binary);
+    ofstream fout("even.dat", ios::binary);
 
     // запись первых n членов последовательности Фибоначчи в бинарный файл
     for (int i = 0; i < n; i++) {
@@ -20,7 +20,7 @@ int main() {
     fout.close();
 
     // открытие бинарного файла для чтения
-    ifstream fin("fibonacci.dat", ios::binary);
+    ifstream fin("even.dat", ios::binary);
 
     // вывод на экран всех компонентов файла с порядковым номером не кратным трем
     int x, i = 1;
