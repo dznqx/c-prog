@@ -12,14 +12,14 @@ int main() {
     }
 
     // Открытие файла для записи
-    std::ofstream output_file("output.txt");
+    ofstream output_file("output.txt");
     if (!output_file) {
         cerr << "Ошибка открытия файла!" << endl;
         return 1;
     }
 
     string line;
-    while (std::getline(input_file, line)) {
+    while (getline(input_file, line)) {
 // Получение длины строкиs
         int length = line.length();
 // Добавление длины строки в конец строки
