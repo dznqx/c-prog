@@ -15,7 +15,7 @@ public:
     }
 
     void print() {
-        std::cout << "Triangle sides: " << a << ", " << b << ", " << c << std::endl;
+        cout << "Triangle sides: " << a << ", " << b << ", " << c << endl;
     }
 
     int perimeter() {
@@ -24,7 +24,7 @@ public:
 
     double area() {
         double p = (double)(a + b + c) / 2.0;
-        return std::sqrt(p * (p - a) * (p - b) * (p - c));
+        return sqrt(p * (p - a) * (p - b) * (p - c));
     }
 
     bool exists() {
@@ -33,6 +33,32 @@ public:
 
     bool operator==(const Triangle& other) {
         return (a == other.a) && (b == other.b) && (c == other.c);
+    }
+
+    Triangle& operator++() {
+        ++a;
+        ++b;
+        ++c;
+        return *this;
+    }
+
+    Triangle& operator--() {
+        --a;
+        --b;
+        --c;
+        return *this;
+    }
+
+    Triangle operator++(int) {
+        Triangle temp = *this;
+        ++(*this);
+        return temp;
+    }
+
+    Triangle operator--(int) {
+        Triangle temp = *this;
+        --(*this);
+        return temp;
     }
 };
 
@@ -44,8 +70,10 @@ int main() {
     cout << "Perimeter: " << t.perimeter() << endl; // Perimeter: 12
     cout << "Area: " << t.area() << endl; // Area: 6
     cout << "Exists: " << t.exists() << endl; // Exists: 1
+    t--;
+    t.print();
     cin >> x1 >> y1 >> z1;
-    Triangle t2(x1, y1, z1);
+    Triangle t2(x1,y1,z1);
     cout << "t == t2: " << (t == t2) << endl; // t == t2: 0
     return 0;
 }
