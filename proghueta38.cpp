@@ -16,8 +16,12 @@ public:
         cout << realPart << " + " << imaginaryPart << "i" << endl;
     }
 
+    void display1() {
+        cout << realPart << " - " << imaginaryPart << "i" << endl;
+    }
+
     Complex conjugate() {
-        return Complex(realPart, -imaginaryPart);
+        return Complex(realPart, imaginaryPart);
     }
 
     bool isEqual(Complex c) {
@@ -45,8 +49,10 @@ public:
 };
 
 int main() {
-    Complex c1(2, 3);
-    Complex c2(4, -5);
+    int x,y,x1,y1;
+    cin >> x >> y >> x1 >> y1;
+    Complex c1(x, y);
+    Complex c2(x1, y1);
 
     cout << "c1 = ";
     c1.display();
@@ -72,7 +78,11 @@ int main() {
 
     Complex conj = c1.conjugate();
     cout << "Conjugate of c1 = ";
-    conj.display();
+    conj.display1();
+
+    Complex conj1 = c2.conjugate();
+    cout << "Conjugate of c2 = ";
+    conj1.display1();
 
     bool isEqual = c1.isEqual(c2);
     cout << "c1 and c2 are " << (isEqual ? "equal" : "not equal") << endl;
