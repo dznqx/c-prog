@@ -1,5 +1,8 @@
 #include <iostream>
 
+
+using namespace std;
+
 // функция для определения количества положительных элементов в одномерном массиве
 template <typename T>
 int countPositive(T* arr, int size) {
@@ -29,8 +32,8 @@ int countPositive(T** arr, int rows, int cols) {
 int main() {
     // тестирование функций
     int arr1[] = {1, -2, 3, -4, 5};
-    std::cout << "Количество положительных элементов в одномерном массиве: "
-              << countPositive(arr1, 5) << std::endl;
+    cout << "Количество положительных элементов в одномерном массиве: "
+              << countPositive(arr1, 5) << endl;
               
     int** arr2 = new int*[3];
     for (int i = 0; i < 3; i++) {
@@ -39,8 +42,8 @@ int main() {
             arr2[i][j] = i * j;
         }
     }
-    std::cout << "Количество положительных элементов в двумерном массиве: "
-              << countPositive(arr2, 3, 3) << std::endl;
+    cout << "Количество положительных элементов в двумерном массиве: "
+              << countPositive(arr2, 3, 3) << endl;
               
     // освобождение памяти
     for (int i = 0; i < 3; i++) {
