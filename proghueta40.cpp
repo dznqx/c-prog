@@ -31,7 +31,6 @@ private:
     int year_;
     string publisher_;
 };
-
 // Класс Article
 class Article : public Edition {
 public:
